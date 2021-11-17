@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply max-w-6xl w-full m-auto;
+  }
+  .page {
+    @apply md:my-8 md:mx-32 p-8 md:rounded-md bg-white box-border;
+  }
+  .page-no-margins {
+    @apply md:rounded-md bg-white box-border;
+  }
+  .page-no-margins-no-padding {
+    @apply md:rounded-md bg-white box-border;
+  }
+  .page-no-padding {
+    @apply md:my-8 md:mx-32 md:rounded-md bg-white box-border;
+  }
+  .hoverable {
+    @apply transition duration-300 ease-in-out focus:outline-none hover:bg-primary-100;
+  }
+  .soft-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  .ellipsis {
+    @apply overflow-ellipsis whitespace-nowrap overflow-hidden;
+  }
+  .title {
+    @apply text-gray-700 font-medium
+  }
+  .subtitle {
+    @apply text-gray-400 font-medium
+
+  }
+}
+
+@layer utilities {
+  @variants responsive {
+    .hide-sidebar {
+      transform: translate(-15rem, 0px);
+      -webkit-transform: translate(-15rem, 0px);
+      -moz-transform: translate(-15rem, 0px);
+    }
+    .show-sidebar {
+      transform: none;
+      -webkit-transform: none;
+      -moz-transform: none;
+    }
+  }
+}
